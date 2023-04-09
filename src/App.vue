@@ -16,12 +16,57 @@ import { RouterLink, RouterView } from 'vue-router'
       </nav>
     </div>
   </header> -->
-  <RouterLink to="/"></RouterLink>
+  <div
+    v-if="$route.path == '/'"
+    style="
+      background: #eee;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    "
+  >
+    <div class="box1 box0">
+      <RouterLink class="center" style="width: 100%; height: 100%; color: #fff" to="/about"
+        >经典模式</RouterLink
+      >
+    </div>
+    <div class="box2 box0">
+      <RouterLink class="center" style="width: 100%; height: 100%; color: #fff" to="/default"
+        >蔡徐坤模式</RouterLink
+      >
+    </div>
+  </div>
 
   <RouterView />
 </template>
 
 <style scoped>
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  height: 40%;
+  background: skyblue;
+  border-radius: 7%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.box0:active {
+  transform: scale(1.1);
+}
+.box1 {
+  margin-bottom: 10%;
+}
+.box2 {
+  background: rgb(171, 231, 171);
+}
 header {
   line-height: 1.5;
   max-height: 100vh;

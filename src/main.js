@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import { Button, Popup ,Form, Field, CellGroup } from 'vant';
+import { Button,Toast,Dialog , Popup ,Form, Field, CellGroup } from 'vant';
 import App from './App.vue'
 import router from './router'
 
@@ -12,7 +12,9 @@ app.use(router)
 app.use(Popup)
 app.use(Form);
 app.use(Field);
+app.use(Dialog);
 app.use(Button);
+app.use(Toast);
 app.use(CellGroup);
 
 app.mount('#app')
