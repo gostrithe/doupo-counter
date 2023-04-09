@@ -16,6 +16,7 @@
       </nav>
     </div>
   </header> -->
+  <RouterLink to="/"></RouterLink>
 
   <RouterView />
 </template>
